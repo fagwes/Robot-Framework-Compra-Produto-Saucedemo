@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230307 19:59:40.819" rpa="false" schemaversion="3">
+<suite id="s1" name="CompraProduto" source="C:\Users\fagwe\OneDrive\Área de Trabalho\Robot - Saucedemo\CompraProduto.robot">
+<test id="s1-t1" name="Cenario 1: login de usuário no site Saucedemo" line="82">
+<kw name="Given que eu esteja no site Saucedemo">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${brownser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230307 19:59:41.717" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230307 19:59:41.717" endtime="20230307 19:59:44.477"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230307 19:59:44.477" endtime="20230307 19:59:44.695"/>
+</kw>
+<kw name="Start Gif Recording" library="ScreenCapLibrary">
+<doc>Starts the recording of a GIF in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Gif Recording` keyword.</doc>
+<status status="PASS" starttime="20230307 19:59:44.695" endtime="20230307 19:59:44.699"/>
+</kw>
+<status status="PASS" starttime="20230307 19:59:41.716" endtime="20230307 19:59:44.700"/>
+</kw>
+<kw name="When digito os dados nas lacunas">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_username}</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230307 19:59:44.704" level="INFO">Typing text 'standard_user' into text field 'xpath= //*[@id="user-name"]'.</msg>
+<status status="PASS" starttime="20230307 19:59:44.702" endtime="20230307 19:59:45.387"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230307 19:59:45.395" level="INFO">Typing text 'secret_sauce' into text field 'xpath= //*[@id="password"]'.</msg>
+<status status="PASS" starttime="20230307 19:59:45.388" endtime="20230307 19:59:46.519"/>
+</kw>
+<status status="PASS" starttime="20230307 19:59:44.702" endtime="20230307 19:59:46.520"/>
+</kw>
+<kw name="And clico no botao registro">
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20230307 19:59:46.527" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20230307 19:59:46.525" endtime="20230307 19:59:47.328"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${buttons_add}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230307 19:59:47.329" endtime="20230307 19:59:47.609"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${buttons_add}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230307 19:59:47.613" level="INFO">Clicking element 'xpath: //*[@id="add-to-cart-sauce-labs-backpack"]'.</msg>
+<status status="PASS" starttime="20230307 19:59:47.610" endtime="20230307 19:59:47.864"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${button_carrinho}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230307 19:59:47.865" endtime="20230307 19:59:47.979"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_carrinho}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230307 19:59:47.981" level="INFO">Clicking element 'xpath: //*[@id="shopping_cart_container"]/a'.</msg>
+<status status="PASS" starttime="20230307 19:59:47.979" endtime="20230307 19:59:48.065"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${button_checkout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230307 19:59:48.065" endtime="20230307 19:59:48.103"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_checkout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230307 19:59:48.105" level="INFO">Clicking element 'xpath: //*[@id="checkout"]'.</msg>
+<status status="PASS" starttime="20230307 19:59:48.104" endtime="20230307 19:59:48.197"/>
+</kw>
+<status status="PASS" starttime="20230307 19:59:46.523" endtime="20230307 19:59:48.197"/>
+</kw>
+<kw name="When digito os dados nas lacunas novamente">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_firstname}</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230307 19:59:48.205" level="INFO">Typing text 'Wesley' into text field 'xpath: //*[@id="first-name"]'.</msg>
+<status status="PASS" starttime="20230307 19:59:48.203" endtime="20230307 19:59:48.398"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_lasttname}</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230307 19:59:48.400" level="INFO">Typing text 'Amorim' into text field 'xpath: //*[@id="last-name"]'.</msg>
+<status status="PASS" starttime="20230307 19:59:48.399" endtime="20230307 19:59:48.585"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_codepostal}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230307 19:59:48.586" level="INFO">Typing text 'secret_sauce' into text field 'xpath: //*[@id="postal-code"]'.</msg>
+<status status="PASS" starttime="20230307 19:59:48.585" endtime="20230307 19:59:48.824"/>
+</kw>
+<status status="PASS" starttime="20230307 19:59:48.202" endtime="20230307 19:59:48.824"/>
+</kw>
+<kw name="And clico nos botoes novamente">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${button_continue}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230307 19:59:48.825" endtime="20230307 19:59:48.874"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_continue}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230307 19:59:48.875" level="INFO">Clicking element 'xpath: //*[@id="continue"]'.</msg>
+<status status="PASS" starttime="20230307 19:59:48.874" endtime="20230307 19:59:48.978"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${button_finish}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230307 19:59:48.978" endtime="20230307 19:59:49.017"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_finish}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230307 19:59:49.018" level="INFO">Clicking element 'xpath: //*[@id="finish"]'.</msg>
+<status status="PASS" starttime="20230307 19:59:49.017" endtime="20230307 19:59:49.101"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${button_backhome}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230307 19:59:49.102" endtime="20230307 19:59:49.146"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_backhome}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230307 19:59:49.147" level="INFO">Clicking element 'xpath: //*[@id="back-to-products"]'.</msg>
+<status status="PASS" starttime="20230307 19:59:49.146" endtime="20230307 19:59:49.238"/>
+</kw>
+<status status="PASS" starttime="20230307 19:59:48.825" endtime="20230307 19:59:49.239"/>
+</kw>
+<kw name="Then registro realizado com sucesso">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230307 19:59:49.243" endtime="20230307 19:59:52.654"/>
+</kw>
+<kw name="Stop Gif Recording" library="ScreenCapLibrary">
+<doc>Stops the GIF recording and generates the file. If ``embed`` argument was set to ``True`` the
+GIF will be displayed in the log file. Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the
+video will be embedded and available in the log file only.</doc>
+<msg timestamp="20230307 19:59:54.093" level="INFO" html="true">&lt;a href="screenshot_1.gif"&gt;&lt;img src="screenshot_1.gif" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230307 19:59:52.654" endtime="20230307 19:59:54.095"/>
+</kw>
+<status status="PASS" starttime="20230307 19:59:49.242" endtime="20230307 19:59:54.095"/>
+</kw>
+<status status="PASS" starttime="20230307 19:59:41.715" endtime="20230307 19:59:54.096"/>
+</test>
+<status status="PASS" starttime="20230307 19:59:40.823" endtime="20230307 19:59:54.099"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="CompraProduto">CompraProduto</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
