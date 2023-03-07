@@ -39,12 +39,12 @@ Given que eu esteja no site Saucedemo
     Maximize Browser Window
     Start Gif Recording
 
-When digito os dados nas lacunas 
+When digito os dados nas lacunas de login
     Input Text    ${input_username}                   ${UserName}
     Input Text    ${input_password}                   ${Password}
  
    
-And clico no botao registro
+And clico no botao de login
     Submit Form
 
     Wait Until Element Is Visible    ${buttons_add}
@@ -81,8 +81,8 @@ Then registro realizado com sucesso
 *** Test Cases ***
 Cenario 1: login de usuário no site Saucedemo
     Given que eu esteja no site Saucedemo
-    When digito os dados nas lacunas 
-    And clico no botao registro
+    When digito os dados nas lacunas de login
+    And clico no botao de login
     When digito os dados nas lacunas novamente
     And clico nos botoes novamente
     Then registro realizado com sucesso
